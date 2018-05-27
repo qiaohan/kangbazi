@@ -104,4 +104,8 @@ if __name__=='__main__':
             traindata, trainlabel = dataset.get_train_batch(batchsize)
             tloss,_ = sess.run([loss,trainop],feed_dict={data:traindata,label:trainlabel})
             print i,tloss
+            if i%20 == 19:
+                traindata, trainlabel = dataset.get_testset()
+                tloss = sess.run([loss],feed_dict={data:traindata,label:trainlabel})
+                print "[test] set loss:",tloss
             
