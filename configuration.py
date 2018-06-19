@@ -1,8 +1,9 @@
 import os
 
-data_folder = 'C:\\Juyue_Personal\\Avito_data'
+#data_folder = 'C:\\Juyue_Personal\\Avito_data'
+data_folder = "/data/avito"
 train_csv_file = os.path.join(data_folder, 'train.csv','train.csv')
-image_folder = os.path.join(data_folder, 'train_jpg_0')
+image_folder = os.path.join(data_folder, 'train_jpg_3')
 
 ## feature extraction
 batch_size = 10
